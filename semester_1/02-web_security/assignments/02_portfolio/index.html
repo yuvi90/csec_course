@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/resume.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio 🚀</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Theme Initialization -->
+  <script>
+    const themeConfig = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    switch (themeConfig) {
+      case "light":
+        break;
+      case "dark":
+        document.documentElement.classList.add("dark");
+        break;
+      default:
+        if (systemPrefersDark) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+        break;
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <header>
+    <section class="container navbar">
+      <!-- Desktop Menu -->
+      <div class="desktop-menu">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-btn-container">
+        <button id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="mobile-menu">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <!-- Theme Toggle -->
+      <div>
+        <button id="theme-btn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Hero  -->
+    <section class="container">
+      <div class="hero-section">
+        <div class="display-text-container">
+          <h1 class="name">Yuvraj Gill</h1>
+          <p class="title">Full Stack Developer</p>
+          <p class="description">
+            Hi, I'm Yuvraj, a passionate Full Stack Developer. I love creating dynamic web applications that offer
+            exceptional user experiences, combining creativity with technical expertise in front-end and back-end
+            development.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/yuvi90" target="_blank" class="button">Github</a>
+            <a href="https://www.linkedin.com/in/yuvi90" target="_blank" class="button">LinkedIn</a>
+          </div>
+        </div>
+        <div class="display-img-container">
+          <img src="/yuvi.jpg" alt="Yuvraj's Picture" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="projects" class="container">
+      <div class="projects-section">
+        <h2 class="projects-title">Projects</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-img">
+              <img src="/chatapp.jpg" alt="chatapp-image" />
+            </div>
+            <div class="card-info">
+              <h2 class="card-title">Chat App</h2>
+              <p class="card-description">
+                Real-time chat app built with MERN stack, using Socket.io.
+              </p>
+              <a href="https://github.com/yuvi90/chatapp" target="_blank" class="card-button">View Source</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="/ecommerce.png" alt="ecommerce-app" />
+            </div>
+            <div class="card-info">
+              <h2 class="card-title">E-commerce App</h2>
+              <p class="card-description">E-commerce app built with MERN stack.</p>
+              <a href="https://github.com/yuvi90/ecommerce-app" target="_blank" class="card-button">View Source</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="/sass.png" alt="sass-library" />
+            </div>
+            <div class="card-info">
+              <h2 class="card-title">Sass Library</h2>
+              <p class="card-description">Sass starter kit built with SCSS and Gulp.</p>
+              <a href="https://github.com/yuvi90/sass-starter" target="_blank" class="card-button">View Source</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="/music-player.jpg" alt="music-player" />
+            </div>
+            <div class="card-info">
+              <h2 class="card-title">Music Player</h2>
+              <p class="card-description">Music player built with HTML, CSS, and JavaScript.</p>
+              <a href="https://github.com/yuvi90/music-player-app" target="_blank" class="card-button">View Source</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container">
+      <div class="contact-section">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-info">
+          <a href="https://www.linkedin.com/in/yuvi90" class="contact-link" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/yuvi90" class="contact-link" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:foo@foo.com" class="contact-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ ©</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

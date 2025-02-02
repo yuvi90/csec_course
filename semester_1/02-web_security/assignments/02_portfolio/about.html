@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/resume.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio 🚀</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Theme Initialization -->
+  <script>
+    const themeConfig = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    switch (themeConfig) {
+      case "light":
+        break;
+      case "dark":
+        document.documentElement.classList.add("dark");
+        break;
+      default:
+        if (systemPrefersDark) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+        break;
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <header>
+    <section class="container navbar">
+      <!-- Desktop Menu -->
+      <div class="desktop-menu">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html">Projects</a>
+          <a href="#">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-btn-container">
+        <button id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="mobile-menu">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html">Projects</a>
+          <a href="#">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <!-- Theme Toggle -->
+      <div>
+        <button id="theme-btn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section class="container">
+      <div class="about-section">
+        <div class="card">
+          <div class="card-img">
+            <img src="/yuvi.jpg" alt="Yuvraj's Image" />
+          </div>
+          <div class="card-info">
+            <h2 class="card-title">About</h2>
+            <p class="card-description">
+              Hi, I'm Yuvraj, a passionate Full Stack Developer. I love creating dynamic web applications that offer
+              exceptional user experiences, combining creativity with technical expertise in front-end and back-end
+              development.
+            </p>
+            <a href="contact.html" class="card-button">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="container">
+      <div class="skills-section">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <h3>HTML & CSS</h3>
+            <p>Creating responsive and semantic designs for a seamless user experience.</p>
+          </div>
+          <div class="skill-item">
+            <h3>JavaScript</h3>
+            <p>Building dynamic and interactive web applications with modern frameworks.</p>
+          </div>
+          <div class="skill-item">
+            <h3>React</h3>
+            <p>Developing efficient and scalable single-page applications.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Node.js</h3>
+            <p>Creating robust backend solutions and RESTful APIs.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Database Management</h3>
+            <p>Proficient in SQL and NoSQL databases like MySQL, MongoDB.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Version Control</h3>
+            <p>Experience with Git and GitHub for collaborative development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container">
+      <div class="contact-section">
+        <p class="contact-info">
+          <a href="https://www.linkedin.com/in/yuvi90" class="contact-link" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/yuvi90" class="contact-link" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:foo@foo.com" class="contact-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ ©</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/resume.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio 🚀</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Theme Initialization -->
+  <script>
+    const themeConfig = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    switch (themeConfig) {
+      case "light":
+        break;
+      case "dark":
+        document.documentElement.classList.add("dark");
+        break;
+      default:
+        if (systemPrefersDark) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+        break;
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <header>
+    <section class="container navbar">
+      <!-- Desktop Menu -->
+      <div class="desktop-menu">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-btn-container">
+        <button id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="mobile-menu">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <!-- Theme Toggle -->
+      <div>
+        <button id="theme-btn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Contact Submit Form -->
+    <section class="container">
+      <div class="contact-section">
+        <div>
+          <h2 class="contact-title">Contact</h2>
+          <p class="contact-description">
+            Please fill out the form below, and I'll get back
+            to you as soon as possible.
+          </p>
+        </div>
+        <form class="contact-form">
+          <input type="text" class="form-input" placeholder="Name" required>
+          <input type="email" class="form-input" placeholder="Email" required>
+          <textarea class="form-textarea" placeholder="Message" required></textarea>
+          <button type="submit" class="form-button">Send</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="container">
+      <div class="contact-section">
+        <!-- <h2 class="contact-title">Contact</h2> -->
+        <p class="contact-info">
+          <a href="https://www.linkedin.com/in/yuvi90" class="contact-link" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/yuvi90" class="contact-link" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:foo@foo.com" class="contact-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ ©</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
