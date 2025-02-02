@@ -1,0 +1,39 @@
+Security Planning - Friday
+
+triage means 'troubleshot'
+
+
+information classified properly who can access (like roles)
+data states - in motion, in rest, in use
+
+- general security policies: letting or allowing access other users on your id and sweep your personal safe and be careful about surroundings
+
+Integrity
+- Back doors
+- Dead locks
+
+
+
+
+INFORMATIONS SYSTEM :
+	Instructure
+	System
+	Network & Communications
+	People
+	Processes
+
+
+
+
+
+
+
+
+Lecture - 31-01-2025
+
+
+Confidential Documents for business:
+	- Gap analysis
+	- Risk Assessment
+	- SWOT
+

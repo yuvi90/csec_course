@@ -1,0 +1,19 @@
+OS and App Security - Monday
+
+OS
+1. User Mode 
+	- Security Account Manager
+	- Local Security Authority
+
+2. Kernel Mode
+	- SRM
+
+
+
+malware - in boot start program --->> it is to be secure
+
+
+
+
+SAM
+password hash -- compare checksome - mfa - 2fa

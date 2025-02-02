@@ -1,0 +1,30 @@
+Web Security - Tuesday
+
+Client
+Server
+Hubs
+Switch
+Router
+AP
+Firewall
+Load Balancer
+
+
+
+After Firewall Systems-->> 
+ 1. Intrusion Detection System (IDS) - Whatever goes to router it sends copy to IDS
+ 2. Intrusion Prevention System (IPS)
+
+
+
+
+Abstraction ??
+Decomposition ??
+
+
+Burned-in address - is also called mac address as it is burned by manufactured to device.
+
+
+!!! whenever there is kms mentioned use fiber cable 
+
+!!! multimode can go upto 10 kms
