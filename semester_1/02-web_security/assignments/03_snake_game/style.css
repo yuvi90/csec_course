@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("game-bg.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    url("bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: "Roboto", serif;
+  letter-spacing: 1;
 }
 
 main.container {
@@ -23,20 +25,31 @@ main.container {
   display: none;
 }
 
-.start-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
+.game-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-btn-container button {
+  padding: 0.5em 1em;
+  font-size: 24px;
+  font-weight: 800;
   text-transform: uppercase;
-  border-radius: 5px;
-  background-color: red;
-  color: #fff;
+  border-radius: 1px;
+  background-color: #00000081;
+  color: #ffffffa2;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease;
 }
 
 .start-button:hover {
+  background-color: #88c63f;
   transform: scale(1.1);
+  transform: rotate(-5deg);
+  color: #fff;
+  text-shadow: 1px 2px #23232371;
 }
