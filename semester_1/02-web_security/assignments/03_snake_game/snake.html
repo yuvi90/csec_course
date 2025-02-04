@@ -12,14 +12,26 @@
 
 <body>
   <main class="container">
+    <!-- Game UI -->
     <div class="game-container">
-      <canvas id="board" width="512" height="512"></canvas>
+      <div class="info-container">
+        <div class="score-container">Score: <span id="score">0</span></div>
+        <div class="level-container">Level: <span id="speed">1</span></div>
+      </div>
+      <canvas id="board"></canvas>
     </div>
-    <div class="game-btn-container">
+
+    <!-- Game Over Modal -->
+    <div class="game-over-container">
+      <p>Game Over</p>
+    </div>
+
+    <!-- Game Menu -->
+    <div class="game-menu">
       <button class="start-button">Start</button>
-      <button class="start-button">Exit</button>
     </div>
   </main>
+
   <script src="script.js"></script>
 </body>
 
