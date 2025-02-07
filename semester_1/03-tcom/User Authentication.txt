@@ -1,0 +1,12 @@
+First flowchart for User Authentication Flow in a Web Application:
+
+Start
+User Sign-Up
+Gateway: Is Email Valid? (Yes → Proceed, No → Error Message)
+Email Verification Step
+User Login
+Gateway: Are Credentials Correct? (Yes → Proceed, No → Show Error)
+Multi-Factor Authentication (MFA) Check (If enabled)
+Token Generation & Session Creation
+Redirect to Dashboard
+Stop

@@ -1,0 +1,60 @@
+#### Router 1
+
+interface g0/0
+ip address 192.168.13.1 255.255.255.0
+no shutdown
+
+interface g0/1
+ip address 192.168.12.1 255.255.255.0
+no shutdown
+
+interface g0/2
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+
+##### Router 2
+
+interface g0/0
+ip address 192.168.12.2 255.255.255.0
+no shutdown
+
+interface g0/1
+ip address 192.168.24.2 255.255.255.0
+no shutdown
+
+
+#### Router 3
+
+interface g0/0
+ip address 192.168.13.3 255.255.255.0
+no shutdown
+
+interface g0/1
+ip address 192.168.34.3 255.255.255.0
+no shutdown
+
+#### Router 4
+
+interface g0/0
+ip address 192.168.24.4 255.255.255.0
+no shutdown
+
+interface g0/1
+ip address 192.168.34.4 255.255.255.0
+no shutdown
+
+interface g0/2
+ip address 192.168.4.4 255.255.255.0
+no shutdown
+
+
+
+
+
+Routing command
+
+show ip route
+ip route 192.168.2.0 255.255.255.0 10.0.0.2
+
+	   Destination Network   Subnet 	 	Via Router
+ip route  192.168.2.0           255.255.255.0 	10.0.0.2
