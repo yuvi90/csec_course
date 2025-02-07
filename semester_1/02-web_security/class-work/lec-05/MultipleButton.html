@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Multiple Buttons</title>
+    <script>
+        // Function for changing paragraph to red
+        function changeToRed() {
+            const header = document.querySelector('p');
+            header.innerHTML = 'This is Red color';
+            header.style.color = 'red';
+        }
+
+        // Function for changing paragraph to blue
+        function changeToBlue() {
+            const header = document.querySelector('p');
+            header.innerHTML = 'This is Blue color';
+            header.style.color = 'blue';
+        }
+
+        // Function for changing paragraph to orange
+        function changeToOrange() {
+            const header = document.querySelector('p');
+            header.innerHTML = 'This is Orange color';
+            header.style.color = 'orange';
+        }
+
+        // Function for changing paragraph to purple
+        function changeToPurple() {
+            const header = document.querySelector('p');
+            header.innerHTML = 'This is Purple color';
+            header.style.color = 'purple';
+        }
+
+        // Function for changing button text color to red
+        function buttonRed() {
+            const button = document.querySelector('#button1');
+            button.style.color = 'red';
+        }
+
+        // Function for changing button text color to blue
+        function buttonBlue() {
+            const button = document.querySelector('#button2');
+            button.style.color = 'blue';
+        }
+
+        // Function for changing button text color to orange
+        function buttonOrange() {
+            const button = document.querySelector('#button3');
+            button.style.color = 'orange';
+        }
+
+        // Function for changing button text color to purple
+        function buttonPurple() {
+            const button = document.querySelector('#button4');
+            button.style.color = 'purple';
+        }
+    </script>
+</head>
+
+<body>
+
+    <p style="color:red;">This is Red color</p>
+
+    <!-- Button 1: Calls changeToRed function -->
+    <button id="button1" onclick="changeToRed()">Make Red</button>
+
+    <!-- Button 2: Calls changeToBlue function -->
+    <button id="button2" onclick="changeToBlue()">Make Blue</button>
+
+    <!-- Button 3: Calls changeToOrange function -->
+    <button id="button3" onclick="changeToOrange()">Make Orange</button>
+
+    <!-- Button 4: Calls changeToPurple function -->
+    <button id="button4" onclick="changeToPurple()">Make Purple</button>
+
+    <!-- Button 1: Calls buttonRed function -->
+    <button onclick="buttonRed()">Button Text Red</button>
+
+    <!-- Button 2: Calls buttonBlue function -->
+    <button onclick="buttonBlue()">Button Text Blue</button>
+
+    <!-- Button 3: Calls buttonRed function -->
+    <button onclick="buttonOrange()">Button Text Orange</button>
+
+    <!-- Button 4: Calls buttonBlue function -->
+    <button onclick="buttonPurple()">Button Text Purple</button>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Count</title>
+  <script>
+    function hello() {
+      const header = document.querySelector('h1');
+      if (header.innerHTML === 'Hello!') {
+        header.innerHTML = 'Goodbye!';
+      }
+      else {
+        header.innerHTML = 'Hello!';
+      }
+    }
+
+    function changePara() {
+      const para = document.querySelector("#para");
+      if (para.innerText.trim() == "Hello") {
+        para.innerText = "Hello World!";
+        para.style.color = "green"
+      } else {
+        para.style.color = "red"
+        para.innerText = "Hello";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Hello!</h1>
+  <p id="para" style="color: red; font-weight: 600;">Hello</p>
+  <button onclick="hello()">Click Here</button>
+  <button onclick="changePara()">Change P</button>
+</body>
+
+</html>
