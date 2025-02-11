@@ -2,10 +2,11 @@ class Calculator {
   constructor() {
     this.displayElement = document.querySelector(".input");
     this.historyListElement = document.querySelector(".history-list");
-    this.isHistoryCleared = true;
     this.currentInput = "0";
     this.previousInput = "";
     this.operator = null;
+    this.activeOperator = null;
+    this.maxInputLength = 10;
   }
 
   reset() {
@@ -24,7 +25,7 @@ class Calculator {
       this.currentInput = number;
     } else if (number === "." && this.currentInput.includes(".")) {
       return;
-    } else {
+    } else if (this.currentInput.length < this.maxInputLength) {
       this.currentInput += number;
     }
     this.updateDisplay();
@@ -86,15 +87,15 @@ class Calculator {
   }
 
   addHistory(entry) {
-    this.isHistoryCleared = false;
+    if (document.querySelector("li.empty-history")) {
+      document.querySelector("li.empty-history").remove();
+    }
     const li = document.createElement("li");
     li.classList.add("list-group-item");
+    li.classList.add("text-muted");
+    li.classList.add("p-0");
     li.textContent = entry;
-    if (!this.isHistoryCleared) {
-      document.querySelector(".text-muted").remove();
-    }
     this.historyListElement.prepend(li);
-
     if (this.historyListElement.children.length > 10) {
       this.historyListElement.removeChild(this.historyListElement.lastChild);
     }
@@ -102,8 +103,7 @@ class Calculator {
 
   clearHistory() {
     this.historyListElement.innerHTML =
-      '<li class="list-group-item text-muted">No history</li>';
-    this.isHistoryCleared = true;
+      "<li class='list-group-item text-muted p-0 empty-history'>There's no history yet.</li>";
   }
 }
 
@@ -133,15 +133,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector("[data-equal]")
     .addEventListener("click", () => calculator.compute());
+
   document
     .querySelector("[data-reset]")
     .addEventListener("click", () => calculator.reset());
+
   document
     .querySelector("[data-del]")
     .addEventListener("click", () => calculator.delete());
+
   document
     .querySelector("[data-sign]")
     .addEventListener("click", () => calculator.toggleSign());
+
   document
     .querySelector("[data-clear-history]")
     .addEventListener("click", () => calculator.clearHistory());

@@ -1,6 +1,9 @@
 .hamburger {
   cursor: pointer;
 }
+.hamburger:hover {
+  color: #c5c4c4;
+}
 
 .calculator-container {
   background-image: radial-gradient(#4d4d4d 0%, #000000 100%);
