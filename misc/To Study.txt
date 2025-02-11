@@ -1,0 +1,15 @@
+1. Don't use default ports of the services.
+2. Use firewall and drop packets if source Ip is not legitimate.
+3. Use encrypted protocols instead of plain e.g. SSL, TLS.
+4. Block and disable unnecessary ports and services.
+5. Monitor network traffic for intruder detection.
+6. Connect server to its own network or domain.
+
+
+
+
+Study On 
+
+Study on Patch Management
+Active Directory 
+Identity Access Management
