@@ -86,3 +86,18 @@ button.util:hover {
 button.bg-danger:hover {
   background: rgb(240, 87, 87) !important;
 }
+
+@media screen and (max-width: 992px) {
+  button {
+    font-size: 18px;
+  }
+
+  .input {
+    font-size: 32px;
+  }
+
+  .hamburger,
+  .menu {
+    display: none;
+  }
+}
