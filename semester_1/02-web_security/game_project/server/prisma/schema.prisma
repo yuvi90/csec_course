@@ -8,6 +8,24 @@ datasource db {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
-  username String @unique
+  id        Int    @id @default(autoincrement())
+  username  String @unique
+  firstName String
+  lastName  String
+  email     String @unique
+  password  String
+  score     Int?
+}
+
+model Question {
+  id         Int    @id @default(autoincrement())
+  question   String
+  answer     String
+  difficulty String
+}
+
+model Option {
+  id         Int    @id @default(autoincrement())
+  questionId Int    @unique
+  option     String
 }
